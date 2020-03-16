@@ -1,6 +1,3 @@
-library(tidyr)
-library(dplyr)
-
 # ------------- read_sp function ---------------------------------
 read_sp <- function( filename, identifier = "#DATA", colnames=c("wl","absorbance")){
   # read df as one column
@@ -20,11 +17,4 @@ read_sp <- function( filename, identifier = "#DATA", colnames=c("wl","absorbance
   return(df)
 }
 
-# ------------- test  ---------------------------------
-
-file<- "example/3.SP"
-df <- read_sp(file)
-
-fileout<-"example/text.txt"
-write.table(df, file = fileout, sep = "\t", row.names = F, col.names = T, quote = F)
 
